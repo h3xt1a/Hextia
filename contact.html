@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hextia - Motion Portfolio</title>
+    <link rel="stylesheet" href="style.css"></link>
+     <!-- SEO meta tags -->
+     <meta name="description" content="Motion Graphics tailored for businesses, startups, and creators. Specializing in advertising creation and shaping distinctive visual brand identities.">
+     <meta name="keywords" content="motion design, graphics, design, vfx, video editing">
+     <meta name="author" content="hextia">
+     <meta name="robots" content="index, follow"> <!-- To allow search engines to index and follow links -->
+     
+     <!-- Open Graph meta tags (for social media) -->
+     <meta property="og:title" content="hextia">
+     <meta property="og:description" content="Motion Graphics tailored for businesses, startups, and creators. Specializing in advertising creation and shaping distinctive visual brand identities.">
+     <meta property="og:image" content="pics/banner.gif"><!-- URL to the image you want to display -->
+     <meta property="og:url" content="https://hextia.art">
+     <meta name="twitter:card" content="summary_large_image"> <!-- Twitter specific card type -->
+     <meta name="twitter:site" content="@hext1a">
+     <!-- Add favicon -->
+     <link rel="icon" href="pics/fav.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 class="stroke-text glitch layers" data-text="hextia"><span>hextia</span></h1>
+            <div class="stack" style="--stacks: 3;">
+                <span style="--index: 0;">VFX / Motion Graphics / Video Editing / 3D Modelling / Graphic Design / Illustrations</span>
+                <span style="--index: 1;">VFX / Motion Graphics / Video Editing / 3D Modelling / Graphic Design / Illustrations</span>
+                <span style="--index: 2;">VFX / Motion Graphics / Video Editing / 3D Modelling / Graphic Design / Illustrations</span>
+              </div>
+        </div>
+
+        <div class="menu">
+
+            <a href="index.html">
+                <div class="cornerb-tl"></div>
+                <div class="cornerb-br"></div>
+                <button id="playButton">Portfolio</button></a>
+            <p>/</p>
+            <a href="about.html"><div class="cornerb-tl"></div>
+                <div class="cornerb-br"></div><button id="playButton">About Me</button></a>
+                <p>/</p>
+            <a href="#">
+                <div class="cornerb-tl cornersel"></div>
+                <div class="cornerb-br cornersel"></div>
+                <button id="playButton" class="selected">Let's Talk</button></a>
+         
+        </div>
+        <div class="menu2">
+            <a href="#">
+                <div class="cornerb-tl cornersel"></div>
+                <div class="cornerb-br cornersel"></div>
+                <button id="playButton">Portfolio</button></a>
+            <p>/</p>
+            <a href="index.html">
+                <div class="cornerb-tl"></div>
+                <div class="cornerb-br"></div>
+                <button id="playButton">Portfolio</button></a>
+            <p>/</p>
+            <a href="about.html"><div class="cornerb-tl"></div>
+                <div class="cornerb-br"></div><button id="playButton">About Me</button></a>
+
+        </div>
+        <div id="popup">
+          Copied to clipboard!
+        </div>
+        <div class="about">
+            <div class="top2">
+                <div class="left">
+                    <h3 class="contact-title">Let's Talk.</h3>
+                    <div class="cdetails">
+                        <div class="cdetail">
+                            <img src="pics/icons/call.png" alt="">
+                            <p>+387 61 667 625</p>
+                        </div>
+                        <div class="cdetail">
+                            <img src="pics/icons/email.png" alt="">
+                            <a href="mailto:contact@hextia.art"><p>contact@hextia.art</p></a>
+                        </div>
+                        <div class="cdetail">
+                            <img src="pics/icons/world.png" alt="">
+                            <p>Bosnia & Herzegovina</p>
+                        </div>
+                    </div>
+                        <div class="social">
+                            <div class="icon">
+                                <a href="https://twitter.com/hext1a" target="_blank"><img src="pics/icons/twitter.png" alt=""></a>
+                            </div>
+                            <div class="icon">
+                                <a id="copyButton"><img src="pics/icons/discord.png" alt=""></a>
+                            </div>
+                            <div class="icon">
+                                <a href="https://www.linkedin.com/in/muhamed-pori%C4%87-8972312a2/" target="_blank"></a><img src="pics/icons/linkedin.png" alt=""></a>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <form id="contactform">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            
+                            <div class="input-container">
+                                <div class="cornerb-tl"></div>
+                                <div class="cornerb-br"></div>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Channel:</label>
+                            <div class="input-container">
+                                <div class="cornerb-tl"></div>
+                                <div class="cornerb-br"></div>
+                            <input type="text" id="company" name="company" required>
+                        </div>  </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <div class="input-container">
+                                <div class="cornerb-tl"></div>
+                                <div class="cornerb-br"></div>
+                            <input type="email" id="email" name="email" required>
+                        </div>  </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <div class="input-container2">
+                                <div class="cornerc-tl"></div>
+                                <div class="cornerc-br"></div>
+                            <textarea id="msg" name="message" rows="10" required></textarea>
+                        </div>
+                        <div class="input-container">
+                            <div class="cornerb-tl"></div>
+                            <div class="cornerb-br"></div>
+                            <div class="btmbar"></div>
+                        <input id="submit" type="submit" value="Submit">
+                    </div>
+                    <p id="status-text" style="align-self: center; text-align: center; margin-top: 10px; font-weight: 100; letter-spacing: 0.03rem;">
+                       
+                    </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>&copy;2024 hextia. All rights reserved.</p>
+        <a href="mailto:contact@hextia.art">contact@hextia.art</a>
+    </div>
+<script>
+    function addBorder(event) {
+        let reel = event.currentTarget;
+        let reelBg = reel.querySelector('.reel-bg');
+        let cornerTL = reel.querySelector('.corner-tl');
+        let cornerBR = reel.querySelector('.corner-br');
+        
+        reelBg.style.border = '1px solid rgba(255, 255, 255, 0.315)';
+        cornerTL.classList.add('border');
+        cornerBR.classList.add('border');
+    }
+
+    function removeBorder(event) {
+        let reel = event.currentTarget;
+        let reelBg = reel.querySelector('.reel-bg');
+        let cornerTL = reel.querySelector('.corner-tl');
+        let cornerBR = reel.querySelector('.corner-br');
+        
+        reelBg.style.border = 'none';
+        cornerTL.classList.remove('border');
+        cornerBR.classList.remove('border');
+    }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init('oaNmrX8jaDQ5lfilw');
+
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const companyInput = document.querySelector('#company');
+const messageInput = document.querySelector('#msg');
+const statusText = document.querySelector('#status-text');
+const btn = document.querySelector('#submit');
+
+document.querySelector('#contactform').addEventListener('submit', e => {
+    e.preventDefault();
+    btn.style.cssText = 'display: none!important;';
+    statusText.innerHTML = 'Sending...';
+    const inputFields = {
+        name: nameInput.value,
+        email: emailInput.value,
+        company: companyInput.value,
+        message: messageInput.value
+    };
+    const serviceID = 'service_q9s5dgv';
+    const templateID = 'template_i744zdd';
+
+    emailjs.send(serviceID, templateID, inputFields)
+        .then(() => {
+            nameInput.value = "";
+            companyInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            statusText.style.color = "var(--font-v1)";
+            btn.style.cssText = 'display: block!important;';
+            statusText.innerHTML = "I've received your inquiry! I'll get back at you as soon as I can, usually within 48h. See you soon!"
+        
+        }, (err) => {
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            statusText.style.color = "var(--font-failure)";
+            statusText.innerHTML = "Message was not sent! Contact me via email: contact@hextia.art"
+        });
+});
+</script>
+
+<script type="text/javascript" src="copy.js"></script>
+</body>
+</html>
