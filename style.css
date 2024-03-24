@@ -220,7 +220,7 @@ h1 {
     flex-wrap: wrap;
     gap: 1rem;
     max-height: 550px;
- /*   border-radius: 12px; */
+    border-radius: 12px;
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer and Edge */
@@ -303,6 +303,50 @@ h1 {
 .clients img:hover {
     filter: brightness(1.2) saturate(100%); /* Increase brightness on hover */
     cursor: pointer;
+}
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* border: 1px solid rgba(255, 255, 255, 0.315);  */
+  /* Initially hide the video */
+  cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    width: 70%; /* Adjust as needed */
+    height: 82.5vh; /* 70% of the viewport height */
+    background-color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 70px;
+    color: #fff;
+    z-index: 1;
+    transform: translate(50px, 0px);
 }
 
 .footer {

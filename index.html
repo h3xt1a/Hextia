@@ -30,6 +30,13 @@
     <div id="popup">
         Copied to clipboard!
       </div>
+
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <iframe id="video-frame" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
     <div class="social2">
         <div class="icon">
             <a href="https://twitter.com/hext1a" target="_blank"><img src="pics/icons/twitter.png" alt=""></a>
@@ -87,46 +94,51 @@
             <a href="https://omega.duelistsunite.org" target="_blank"><img src="pics/logos/5.png" alt=""></a>
             <a href="https://www.hyperluminous-studios.com" target="_blank"><img src="pics/logos/6.png" alt=""></a>
         </div>
+        
         <div class="portfolio">
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" id="video-container" onclick="openLightboxPlayer()" onmouseover="addBorder()" onmouseout="removeBorder()">
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <video id="video" width="240" height="135" preload="metadata" muted loop>
+                    <source src="videos/a.mp4" type="video/mp4" >
+                    Your browser does not support the video tag.
+                </video>
+                <img id="thumbnail" class="reel-bg" src="pics/sample/1.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
-            <div class="reel" onmouseover="addBorder(event)" onmouseout="removeBorder(event)">
+            <div class="reel" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
-                <img class="reel-bg" src="pics/none.jpg"></img>
+                <img class="reel-bg" src="pics/sample/filler.jpg"></img>
             </div>
         </div>
         <!-- <div class="categories">
@@ -153,28 +165,54 @@
         <p>&copy;2024 hextia. All rights reserved.</p>
         <a href="mailto:contact@hextia.art">contact@hextia.art</a>
     </div>
-<script>
-    function addBorder(event) {
-        let reel = event.currentTarget;
-        let reelBg = reel.querySelector('.reel-bg');
-        let cornerTL = reel.querySelector('.corner-tl');
-        let cornerBR = reel.querySelector('.corner-br');
-        
-        reelBg.style.border = '1px solid rgba(255, 255, 255, 0.315)';
-        cornerTL.classList.add('border');
-        cornerBR.classList.add('border');
-    }
 
-    function removeBorder(event) {
-        let reel = event.currentTarget;
-        let reelBg = reel.querySelector('.reel-bg');
-        let cornerTL = reel.querySelector('.corner-tl');
-        let cornerBR = reel.querySelector('.corner-br');
-        
-        reelBg.style.border = 'none';
-        cornerTL.classList.remove('border');
-        cornerBR.classList.remove('border');
-    }
+<script>
+    var video = document.getElementById('video');
+
+function addBorder() {
+    var reelContainer = document.getElementById('video-container');
+    var cornerTL = reelContainer.querySelector('.corner-tl');
+    var cornerBR = reelContainer.querySelector('.corner-br');
+    
+    video.style.border = '1px solid rgba(255, 255, 255, 0.315)';
+    video.style.display = 'block';
+    document.getElementById('thumbnail').style.display = 'none';
+    cornerTL.classList.add('border');
+    cornerBR.classList.add('border');
+    video.play();
+}
+
+function removeBorder() {
+    var reelContainer = document.getElementById('video-container');
+    var cornerTL = reelContainer.querySelector('.corner-tl');
+    var cornerBR = reelContainer.querySelector('.corner-br');
+    
+    
+    video.style.display = 'none';
+    document.getElementById('thumbnail').style.display = 'block';
+    cornerTL.classList.remove('border');
+    cornerBR.classList.remove('border');
+    video.pause();
+    video.currentTime = 8;
+}
+
+function openLightboxPlayer() {
+    var videoUrl = "https://www.youtube.com/watch?v=c19Mlow4K-U"; // Replace with your YouTube video URL
+    var videoId = videoUrl.split("v=")[1];
+    var videoFrame = document.getElementById("video-frame");
+    videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    
+    var lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "block";
+}
+
+function closeLightbox() {
+    var lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+    
+    var videoFrame = document.getElementById("video-frame");
+    videoFrame.src = "";
+}
 </script>
 <script type="text/javascript" src="copy.js"></script>
 </body>
