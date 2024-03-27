@@ -220,7 +220,7 @@ h1 {
     flex-wrap: wrap;
     gap: 1rem;
     max-height: 550px;
-    border-radius: 12px;
+   /* border-radius: 12px; */
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer and Edge */
