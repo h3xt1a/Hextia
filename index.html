@@ -112,7 +112,7 @@
                 </video>
                 <img id="thumbnail" class="reel-bg" src="pics/sample/1.jpg"></img>
             </div>
-            <div class="reel" >
+            <div class="reel" id="video-container" onclick="openLightboxPlayer()" onmouseover="addBorder()" onmouseout="removeBorder()" >
                 <div class="corner-tl"></div>
                 <div class="corner-br"></div>
                 <img class="reel-bg" src="pics/sample/filler.jpg"></img>
@@ -212,7 +212,15 @@ function openLightboxPlayer() {
     var lightbox = document.getElementById("lightbox");
     lightbox.style.display = "block";
 }
-
+function openLightboxPlayer1() {
+    var videoUrl = "https://www.youtube.com/watch?v=9G6Ai3X9j1o"; // Replace with your YouTube video URL
+    var videoId = videoUrl.split("v=")[1];
+    var videoFrame = document.getElementById("video-frame");
+    videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    
+    var lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "block";
+}
 function closeLightbox() {
     var lightbox = document.getElementById("lightbox");
     lightbox.style.display = "none";
